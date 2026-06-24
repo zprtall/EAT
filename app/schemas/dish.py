@@ -9,5 +9,6 @@ class Ingredient(BaseModel):
 
 class Dish(BaseModel):
     name: str
-    weight_finish_dish: float
-    ingredient: Ingredient
+    user_id: int
+    weight_finish_dish: float | None = None
+    ingredient: list[Ingredient]

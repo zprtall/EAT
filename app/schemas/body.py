@@ -3,6 +3,7 @@ from pydantic import BaseModel
 
 class BodyParam(BaseModel):
     date: datetime.date
+    user_id: int
     weight: float
     neck: float
     shoulder: float

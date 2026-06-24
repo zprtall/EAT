@@ -1,8 +1,9 @@
-version: '3'
+version: '3.8'
 
 services:
   api:
-    image: ghcr.io/zprtall/twa_be:latest
+    build: .
+    image: ghcr.io/zprtall/eat:latest
     container_name: API
     working_dir: /app
     ports:
@@ -11,9 +12,11 @@ services:
       - postgres
       - redis
     restart: always
+    volumes:
+      - .:/app
 
   postgres:
-    image: postgres
+    image: postgres:18
     container_name: postgres
     restart: always
     environment:
@@ -23,7 +26,7 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql
 
   redis:
     image: redis:7-alpine
@@ -43,3 +46,6 @@ services:
       - WATCHTOWER_REGISTRY_PASSWORD=${GHCR_PASS}
       - WATCHTOWER_CLEANUP=true
       - WATCHTOWER_POLL_INTERVAL=60
+
+volumes:
+  pgdata:
