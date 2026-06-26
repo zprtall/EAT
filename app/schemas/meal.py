@@ -15,7 +15,6 @@ class MealItem(BaseModel):
     type: MealType
     product_id: int | None = None
     dish_id: int | None = None
-    grams: float
 
     @model_validator(mode="after")
     def validate_item(self):

@@ -46,6 +46,7 @@ services:
       - WATCHTOWER_REGISTRY_PASSWORD=${GHCR_PASS}
       - WATCHTOWER_CLEANUP=true
       - WATCHTOWER_POLL_INTERVAL=60
+      - DOCKER_API_VERSION=1.44
 
 volumes:
   pgdata:
