@@ -1,9 +1,10 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
+
 
 class Product(BaseModel):
     id: int
-    name: str
-    calories: float
-    proteins: float
-    fats: float
-    carbs: float
+    name: str = Field(max_length=15)
+    calories: float = Field(gt=0)
+    proteins: float = Field(ge=0)
+    fats: float = Field(ge=0)
+    carbs: float = Field(ge=0)

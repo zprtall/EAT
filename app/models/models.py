@@ -35,7 +35,7 @@ class BodyParam(Base):
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable=False)
-    date: Mapped[datetime.date] = mapped_column(Date, default=datetime.date.today)
+    date: Mapped[datetime.date] = mapped_column(Date, default=datetime.date)
     weight: Mapped[float] = mapped_column(Float, nullable=False)
     neck: Mapped[float] = mapped_column(Float, nullable=False)
     shoulder: Mapped[float] = mapped_column(Float, nullable=False)
@@ -91,18 +91,34 @@ class Ingredient(Base):
 
     dish = relationship("Dish", back_populates="ingredients")
 
+class Meal(Base):
+    __tablename__ = "meals"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+
+    date: Mapped[datetime.date] = mapped_column(Date, nullable=False)
+    time: Mapped[datetime.time] = mapped_column(Time, nullable=False)
+
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"))
+
+    type: Mapped[str] = mapped_column(String, nullable=False)
+
+    items = relationship(
+        "MealItem",
+        back_populates="meal",
+        cascade="all, delete-orphan"
+    )
+
 
 class MealItem(Base):
     __tablename__ = "meal_items"
 
-    id: Mapped[int] = mapped_column(Integer, primary_key=True)
-    date: Mapped[datetime.date] = mapped_column(Date, nullable=False)
-    time: Mapped[datetime.time] = mapped_column(Time, nullable=False)
-    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable=False)
-    type: Mapped[str] = mapped_column(String, nullable=False)
-    product_id: Mapped[int | None] = mapped_column(ForeignKey("products.id"), nullable=True)
-    dish_id: Mapped[int | None] = mapped_column(ForeignKey("dishes.id"), nullable=True)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    meal_id: Mapped[int] = mapped_column(ForeignKey("meals.id"))
+    product_id: Mapped[int | None] = mapped_column(ForeignKey("products.id"))
+    dish_id: Mapped[int | None] = mapped_column(ForeignKey("dishes.id"))
+    grams: Mapped[float] = mapped_column(Float, nullable=False)
 
-    user = relationship("User", back_populates="meal_items")
-    dish = relationship("Dish", back_populates="meal_items")
+    meal = relationship("Meal", back_populates="items")
     product = relationship("Product")
+    dish = relationship("Dish")
