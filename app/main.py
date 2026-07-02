@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 import redis
-app = FastAPI(title="app", version="1.0.0")
+from app.api.meal import router as meal_router
 
+
+app = FastAPI(title="app", version="1.0.0")
+app.include_router(meal_router)
 @app.get("/")
 async def root():
     return {"message": "OK"}

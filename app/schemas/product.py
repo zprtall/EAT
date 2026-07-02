@@ -2,7 +2,7 @@ from pydantic import BaseModel, Field
 
 
 class Product(BaseModel):
-    id: int
+    user_id: int
     name: str = Field(max_length=15)
     calories: float = Field(gt=0)
     proteins: float = Field(ge=0)
