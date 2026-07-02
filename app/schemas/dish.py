@@ -1,16 +1,23 @@
-from pydantic import BaseModel
+from typing import Optional
+
+from pydantic import BaseModel, Field
+
 
 class Ingredient(BaseModel):
-    dish_id: int
-    weight: float
-    calories: float
-    proteins: float
-    fats: float
-    carbs: float
+    weight: float = Field(gt=0)
+    calories: float = Field(ge=0)
+    proteins: float = Field(ge=0)
+    fats: float = Field(ge=0)
+    carbs: float = Field(ge=0)
 
 class Dish(BaseModel):
     name: str
     user_id: int
-    dish_id: int
-    weight_finish_dish: float | None = None
-    ingredient: list[Ingredient]
+    weight_finish_dish: Optional[float] = None
+
+    calories: Optional[float] = None
+    proteins: Optional[float] = None
+    fats: Optional[float] = None
+    carbs: Optional[float] = None
+
+    ingredients: list[Ingredient]
