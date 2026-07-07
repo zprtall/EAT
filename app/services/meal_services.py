@@ -1,7 +1,7 @@
 import datetime
 from fastapi import HTTPException
 
-from app.models.target import NutritionTarget
+from app.models.target import NutritionDailyTarget
 from app.models.meal import Meal, MealItem
 from app.repositories.meal_repo import MealRepository
 from app.schemas.meal import MealCreate
@@ -68,7 +68,7 @@ class MealService:
                 "total_carbs": m_c,
             })
 
-        target = session.query(NutritionTarget).filter_by(user_id=user_id).first()
+        target = session.query(NutritionDailyTarget).filter_by(user_id=user_id).first()
 
         return {
             "summary": {

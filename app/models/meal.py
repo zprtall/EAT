@@ -1,14 +1,14 @@
 from app.models.models import Base
-
+from sqlalchemy import DateTime
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-from sqlalchemy import Integer, String, Float, Date, Time, ForeignKey, CheckConstraint
+from sqlalchemy import Integer, String, Float, Date, Time, ForeignKey
 import datetime
 
 class Meal(Base):
     __tablename__ = "meals"
 
     meal_id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
-
+    created_at: Mapped[datetime.datetime] = mapped_column(DateTime, default=datetime.utcnow)
     date: Mapped[datetime.date] = mapped_column(Date, nullable=False)
     time: Mapped[datetime.time] = mapped_column(Time, nullable=False)
 
