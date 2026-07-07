@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 import redis
+from starlette.middleware.sessions import SessionMiddleware
+
 from app.admin.setup import setup_admin
 from app.core.database import engine
 
@@ -18,6 +20,12 @@ app.include_router(dish_router)
 app.include_router(library_router)
 app.include_router(product_router)
 app.include_router(target_router)
+
+app.add_middleware(
+    SessionMiddleware,
+    secret_key="SUPER_SECRET"
+)
+
 @app.get("/")
 async def root():
     return {"message": "OK"}
