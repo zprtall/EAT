@@ -1,7 +1,7 @@
 from app.models.models import Base
 from sqlalchemy import DateTime
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-from sqlalchemy import Integer, String, Float, Date, Time, ForeignKey, CheckConstraint
+from sqlalchemy import Integer, String, Float, Date, Time, ForeignKey, DateTime
 import datetime
 
 class Meal(Base):
