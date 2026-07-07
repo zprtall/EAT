@@ -13,7 +13,7 @@ def get_dish_service():
     return DishService(DishRepo())
 
 
-@router.get("/{dish_id}")
+@router.get("/get/")
 def get_dish(
     dish_id: int,
     session: Session = Depends(get_session),
@@ -44,7 +44,7 @@ def update_dish(
     return service.update_dish(session, dish_id, data, finish)
 
 
-@router.delete("/{dish_id}")
+@router.delete("/delete/")
 def delete_dish(
     dish_id: int,
     session: Session = Depends(get_session),
