@@ -1,5 +1,9 @@
 from fastapi import FastAPI
 import redis
+from sqladmin import Admin
+
+from app.core.database import engine
+
 from app.api.meal import router as meal_router
 from app.api.body import router as body_router
 from app.api.dish import router as dish_router
@@ -19,6 +23,9 @@ app.include_router(target_router)
 async def root():
     return {"message": "OK"}
 
-
+admin = Admin(
+    app,
+    engine
+)
 
 r = redis.Redis(host="localhost", port=6379, db=0, decode_responses=True)
