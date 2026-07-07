@@ -6,7 +6,7 @@ from sqlalchemy import Integer, String, Float, ForeignKey
 class Dish(Base):
     __tablename__ = "dishes"
 
-    id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
+    dishes_id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
     name: Mapped[str] = mapped_column(String, nullable=False)
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable=False)
     weight_finish_dish: Mapped[float] = mapped_column(Float, nullable=True)
@@ -28,7 +28,7 @@ class Ingredient(Base):
     __tablename__ = "ingredients"
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, index = True)
-    dish_id: Mapped[int] = mapped_column(ForeignKey("dishes.id"), nullable=False)
+    dish_id: Mapped[int] = mapped_column(ForeignKey("dishes.dishes_id"), nullable=False)
     weight: Mapped[float] = mapped_column(Float, nullable=False)
     calories: Mapped[float] = mapped_column(Float, nullable=False)
     proteins: Mapped[float] = mapped_column(Float, nullable=False)

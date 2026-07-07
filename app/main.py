@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 import redis
-from sqladmin import Admin
-
+from app.admin.setup import setup_admin
 from app.core.database import engine
 
 from app.api.meal import router as meal_router
@@ -23,7 +22,7 @@ app.include_router(target_router)
 async def root():
     return {"message": "OK"}
 
-admin = Admin(
+setup_admin(
     app,
     engine
 )
