@@ -27,9 +27,9 @@ class MealItem(Base):
     __tablename__ = "meal_items"
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    meal_id: Mapped[int] = mapped_column(ForeignKey("meals.id"))
-    product_id: Mapped[int | None] = mapped_column(ForeignKey("products.id"))
-    dish_id: Mapped[int | None] = mapped_column(ForeignKey("dishes.id"))
+    meal_id: Mapped[int] = mapped_column(ForeignKey("meals.meal_id"))
+    product_id: Mapped[int | None] = mapped_column(ForeignKey("products.product_id"))
+    dish_id: Mapped[int | None] = mapped_column(ForeignKey("dishes.dishes_id"))
     grams: Mapped[float] = mapped_column(Float, nullable=False)
 
     meal = relationship("Meal", back_populates="items")

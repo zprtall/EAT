@@ -1,10 +1,12 @@
 from sqlalchemy import create_engine
+from sqlalchemy.ext.asyncio import create_async_engine
 from sqlalchemy.orm import sessionmaker, Session
 from typing import Generator
+from app.core.config import settings
 
-DATABASE_URL = "postgresql+psycopg2://postgres:1234@localhost:5432/postgres"
-
-engine = create_engine(DATABASE_URL, echo=True)
+engine = create_engine(
+    settings.DATABASE_URL
+)
 
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
 

@@ -1,12 +1,24 @@
 from logging.config import fileConfig
 
-from pydantic import model_validator
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 
 from alembic import context
 
+import os
+from dotenv import load_dotenv
+
+
+
 from app.models.models import Base
+from app.models.body_param import BodyParam
+from app.models.dish import Dish, Ingredient
+from app.models.meal import Meal, MealItem
+from app.models.product import Product
+from app.models.target import NutritionDailyTarget
+from app.models.user import User
+
+
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
@@ -27,6 +39,15 @@ target_metadata = Base.metadata
 # can be acquired:
 # my_important_option = config.get_main_option("my_important_option")
 # ... etc.
+
+load_dotenv()
+
+database_url = os.getenv("DATABASE_URL")
+
+config.set_main_option(
+    "sqlalchemy.url",
+    os.getenv("DATABASE_URL")
+)
 
 
 def run_migrations_offline() -> None:
