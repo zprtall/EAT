@@ -98,7 +98,7 @@ class MealService:
 
         for item in data.items:
             if not item.product_id and not item.dish_id:
-                raise HTTPException(status_code=400, detail="Нужно указать продукт или блюдо")  # ❗ фикс
+                raise HTTPException(status_code=400, detail="Нужно указать продукт или блюдо")
 
             meal_item = MealItem(
                 product_id=item.product_id,
