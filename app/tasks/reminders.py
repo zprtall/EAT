@@ -1,10 +1,8 @@
-from fastapi.params import Depends
-
 from app.core.celery import celery
 from datetime import datetime, timedelta
 from sqlalchemy.orm import Session
 
-from app.core.database import SessionLocal, get_session
+from app.core.database import SessionLocal
 from app.models.meal import Meal
 from app.models.user import User
 from app.services.analytics_service import get_user_habit_times

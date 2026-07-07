@@ -7,7 +7,7 @@ from app.repositories.target_repo import NutritionRepository
 from app.services.target_service import NutritionService
 from app.auth.dependencie import get_current_user
 
-router = APIRouter(prefix="target")
+router = APIRouter(prefix="/target")
 
 def get_nutrition_service():
     return NutritionService(NutritionRepository())

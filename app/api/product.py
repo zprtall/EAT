@@ -8,7 +8,7 @@ from app.services.product_service import ProductService
 from app.core.database import get_session
 from app.auth.dependencie import get_current_user
 
-router = APIRouter(prefix="/product/")
+router = APIRouter(prefix="/product")
 
 def get_product_service():
     return ProductService(ProductRepo())

@@ -17,26 +17,22 @@ services:
       - .:/app
 
   celery_worker:
-    build: .
+    image: ghcr.io/zprtall/eat:latest
     container_name: celery_worker
     command: celery -A app.core.celery worker --loglevel=info
     depends_on:
       - redis
       - postgres
     restart: always
-    volumes:
-      - .:/app
 
   celery_beat:
-    build: .
+    image: ghcr.io/zprtall/eat:latest
     container_name: celery_beat
     command: celery -A app.core.celery beat --loglevel=info
     depends_on:
       - redis
       - postgres
     restart: always
-    volumes:
-      - .:/app
 
   postgres:
     image: postgres:16

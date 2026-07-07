@@ -7,7 +7,7 @@ from app.schemas.body import BodyParam as BodyParamSchema
 from app.services.body_service import BodyService
 from app.auth.dependencie import get_current_user
 
-router = APIRouter(prefix="/body/")
+router = APIRouter(prefix="/body")
 
 
 def get_body_service():

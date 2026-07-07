@@ -1,5 +1,5 @@
 import datetime
-from pydantic import BaseModel, model_validator, Field
+from pydantic import BaseModel, model_validator
 from enum import Enum
 
 class MealItemOut(BaseModel):
