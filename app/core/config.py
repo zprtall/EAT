@@ -13,6 +13,8 @@ class Settings(BaseSettings):
     POSTGRES_PASSWORD: str
     POSTGRES_DB: str
 
+    DEBUG: bool = True
+
     REDIS_HOST: str
     REDIS_PORT: int
 
