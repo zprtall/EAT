@@ -1,5 +1,5 @@
 from fastapi import HTTPException
-from app.models.target import NutritionTarget
+from app.models.target import NutritionDailyTarget
 from app.repositories.target_repo import NutritionRepository
 
 class NutritionService:
@@ -10,7 +10,7 @@ class NutritionService:
     def _get_or_create(self, session, user_id: int):
         target = self.repo.get_by_user(session, user_id)
         if not target:
-            target = NutritionTarget(user_id=user_id)
+            target = NutritionDailyTarget(user_id=user_id)
             target = self.repo.create(session, target)
         return target
 
