@@ -16,8 +16,5 @@ class User(Base):
     body_params = relationship("BodyParam", back_populates="user")
     dishes = relationship("Dish", back_populates="user")
     meals = relationship("Meal", back_populates="user")
-<<<<<<< HEAD
-    nutrition_target = relationship("NutritionTarget", back_populates="user", uselist=False)
-=======
     nutrition_daily_target = relationship("NutritionDailyTarget", back_populates="user", uselist=False)
->>>>>>> dbd197587f071c39fc093ab72511cd8be9e20876
+
