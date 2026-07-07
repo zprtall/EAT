@@ -6,7 +6,7 @@ from app.repositories.dish_repo import DishRepo
 from app.schemas.dish import Dish as DishSchema
 from app.services.dish_services import DishService
 
-router = APIRouter(prefix="/dish/")
+router = APIRouter(prefix="/dish")
 
 
 def get_dish_service():
