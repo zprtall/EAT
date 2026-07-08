@@ -17,6 +17,8 @@ from app.models.meal import Meal, MealItem
 from app.models.product import Product
 from app.models.target import NutritionDailyTarget
 from app.models.user import User
+from app.models.user_reminder_settings import UserReminderSettings
+from app.models.system_settings import SystemSettings
 
 
 
