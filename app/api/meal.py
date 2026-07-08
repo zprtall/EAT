@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 
 from app.core.database import get_session
 from app.repositories.meal_repo import MealRepository
-from app.schemas.meal import MealCreate
+from app.schemas.meal import MealCreate, DayResponse
 from app.services.meal_services import MealService
 from app.auth.dependencie import get_current_user
 
@@ -15,7 +15,7 @@ def get_meal_service():
     return MealService(MealRepository())
 
 
-@router.get("/")
+@router.get("/", response_model=DayResponse)
 def get_day(
     date: datetime.date,
     user = Depends(get_current_user),
@@ -25,7 +25,7 @@ def get_day(
     return service.get_day(session, user, date)
 
 
-@router.post("/add/")
+@router.post("/add/", response_model=MealCreate)
 def add_meal(
     data: MealCreate,
     user = Depends(get_current_user),
@@ -44,7 +44,7 @@ def delete_meal(
 ):
     return service.delete_meal(session, meal_id, user)
 
-@router.put("/update/")
+@router.put("/update/", response_model=MealCreate)
 def update_meal(
     meal_id: int,
     data: MealCreate,

@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 
 from app.core.database import get_session
 from app.repositories.target_repo import NutritionRepository
+from app.schemas.target import NutritionDailyTarget
 from app.services.target_service import NutritionService
 from app.auth.dependencie import get_current_user
 
@@ -12,7 +13,7 @@ router = APIRouter(prefix="/target")
 def get_nutrition_service():
     return NutritionService(NutritionRepository())
 
-@router.put("/calories/")
+@router.put("/calories/", response_model=NutritionDailyTarget)
 def update_calories(
     value: float,
     user = Depends(get_current_user),
@@ -22,7 +23,7 @@ def update_calories(
     return service.update_calories(session, user, value)
 
 
-@router.put("/proteins/")
+@router.put("/proteins/", response_model=NutritionDailyTarget)
 def update_proteins(
     value: float,
     user = Depends(get_current_user),
@@ -32,7 +33,7 @@ def update_proteins(
     return service.update_proteins(session, user, value)
 
 
-@router.put("/fats/")
+@router.put("/fats/", response_model=NutritionDailyTarget)
 def update_fats(
     value: float,
     user = Depends(get_current_user),
@@ -42,7 +43,7 @@ def update_fats(
     return service.update_fats(session, user, value)
 
 
-@router.put("/carbs/")
+@router.put("/carbs/", response_model=NutritionDailyTarget)
 def update_carbs(
     value: float,
     user = Depends(get_current_user),

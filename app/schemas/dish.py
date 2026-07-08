@@ -11,8 +11,8 @@ class Ingredient(BaseModel):
     carbs: float = Field(ge=0)
 
 class Dish(BaseModel):
-    name: str
     user_id: int
+    name: str
     weight_finish_dish: Optional[float] = None
 
     calories: Optional[float] = None

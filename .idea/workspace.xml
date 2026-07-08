@@ -4,25 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e64b65a7-cfd0-4a0b-a21e-08a8bdbbcc31" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/EAT.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+    <list default="true" id="e64b65a7-cfd0-4a0b-a21e-08a8bdbbcc31" name="Changes" comment="test: response_model">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/body.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/body.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/dish.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/dish.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/meal.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/meal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/product.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/product.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/dish.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/dish.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/meal.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/meal.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feat/admin" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;zprtall&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:zprtall/EAT.git&quot;,
+    &quot;accountId&quot;: &quot;7c564b1a-dae5-4ab0-bb04-39ef0a6f259c&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="3FZo8VYfBznVTheqLvtZtBmSSz8" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -52,6 +78,414 @@
       <option name="presentableId" value="Default" />
       <updated>1782291792844</updated>
     </task>
+    <task id="LOCAL-00001" summary="fix(app/schemas/): add the fields">
+      <option name="closed" value="true" />
+      <created>1782472604288</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1782472604288</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat(models): description of models&#10;feat(alembic/versions): initial migration">
+      <option name="closed" value="true" />
+      <created>1782472779097</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1782472779097</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat(schemas): validation&#10;fix(models):meal">
+      <option name="closed" value="true" />
+      <created>1782722656191</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1782722656191</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix all">
+      <option name="closed" value="true" />
+      <created>1782992466691</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1782992466691</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: tg auth">
+      <option name="closed" value="true" />
+      <created>1782996371277</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1782996371277</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat(main): router">
+      <option name="closed" value="true" />
+      <created>1782996856003</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1782996856003</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix NutritionTarget">
+      <option name="closed" value="true" />
+      <created>1783404264923</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1783404264923</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: celery">
+      <option name="closed" value="true" />
+      <created>1783405679680</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1783405679680</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: celery">
+      <option name="closed" value="true" />
+      <created>1783406854847</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1783406854847</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: celery">
+      <option name="closed" value="true" />
+      <created>1783407020663</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1783407020663</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: celery">
+      <option name="closed" value="true" />
+      <created>1783407296798</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1783407296798</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: celery">
+      <option name="closed" value="true" />
+      <created>1783407687766</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1783407687766</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix all warnings from the IDE">
+      <option name="closed" value="true" />
+      <created>1783408837729</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1783408837729</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fix all warnings from the IDE">
+      <option name="closed" value="true" />
+      <created>1783409309743</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1783409309743</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix dish route">
+      <option name="closed" value="true" />
+      <created>1783409720236</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1783409720236</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix docker-compose">
+      <option name="closed" value="true" />
+      <created>1783411719878</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1783411719878</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: admin, admin_auth">
+      <option name="closed" value="true" />
+      <created>1783417544746</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1783417544746</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix models&#10;feat model in admin">
+      <option name="closed" value="true" />
+      <created>1783419813266</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1783419813266</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fix admin auth">
+      <option name="closed" value="true" />
+      <created>1783421132067</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1783421132067</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fix admin auth">
+      <option name="closed" value="true" />
+      <created>1783421614173</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1783421614173</updated>
+    </task>
+    <task id="LOCAL-00021" summary="test">
+      <option name="closed" value="true" />
+      <created>1783422403022</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1783422403022</updated>
+    </task>
+    <task id="LOCAL-00022" summary="test">
+      <option name="closed" value="true" />
+      <created>1783424234676</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1783424234676</updated>
+    </task>
+    <task id="LOCAL-00023" summary="test">
+      <option name="closed" value="true" />
+      <created>1783424489747</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1783424489748</updated>
+    </task>
+    <task id="LOCAL-00024" summary="test">
+      <option name="closed" value="true" />
+      <created>1783424636819</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1783424636819</updated>
+    </task>
+    <task id="LOCAL-00025" summary="test">
+      <option name="closed" value="true" />
+      <created>1783424928347</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1783424928347</updated>
+    </task>
+    <task id="LOCAL-00026" summary="test">
+      <option name="closed" value="true" />
+      <created>1783426143634</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1783426143634</updated>
+    </task>
+    <task id="LOCAL-00027" summary="test">
+      <option name="closed" value="true" />
+      <created>1783427954145</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1783427954145</updated>
+    </task>
+    <task id="LOCAL-00028" summary="test">
+      <option name="closed" value="true" />
+      <created>1783428848565</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1783428848565</updated>
+    </task>
+    <task id="LOCAL-00029" summary="test">
+      <option name="closed" value="true" />
+      <created>1783429808421</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1783429808421</updated>
+    </task>
+    <task id="LOCAL-00030" summary="postman check">
+      <option name="closed" value="true" />
+      <created>1783490626100</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1783490626100</updated>
+    </task>
+    <task id="LOCAL-00031" summary="postman check">
+      <option name="closed" value="true" />
+      <created>1783491667963</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1783491667963</updated>
+    </task>
+    <task id="LOCAL-00032" summary="postman check">
+      <option name="closed" value="true" />
+      <created>1783493430965</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1783493430965</updated>
+    </task>
+    <task id="LOCAL-00033" summary="postman check">
+      <option name="closed" value="true" />
+      <created>1783493620410</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1783493620410</updated>
+    </task>
+    <task id="LOCAL-00034" summary="postman check">
+      <option name="closed" value="true" />
+      <created>1783493709202</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1783493709202</updated>
+    </task>
+    <task id="LOCAL-00035" summary="fix(product_service): user.id">
+      <option name="closed" value="true" />
+      <created>1783494958113</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1783494958113</updated>
+    </task>
+    <task id="LOCAL-00036" summary="fix(dish_repo): Dish.dishes_id">
+      <option name="closed" value="true" />
+      <created>1783496459235</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1783496459235</updated>
+    </task>
+    <task id="LOCAL-00037" summary="fix(dish_repo): fix delete and update&#10;feat(dish_repo): return in delete and put">
+      <option name="closed" value="true" />
+      <created>1783497493019</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1783497493019</updated>
+    </task>
+    <task id="LOCAL-00038" summary="fix(library_service/repo): user_id -&gt; user.id">
+      <option name="closed" value="true" />
+      <created>1783497953859</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1783497953859</updated>
+    </task>
+    <task id="LOCAL-00039" summary="fix(library_service): dishes_id, product_id">
+      <option name="closed" value="true" />
+      <created>1783498389172</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1783498389172</updated>
+    </task>
+    <task id="LOCAL-00040" summary="fix(body_service/repo): user_id -&gt; user.id">
+      <option name="closed" value="true" />
+      <created>1783498745277</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1783498745277</updated>
+    </task>
+    <task id="LOCAL-00041" summary="fix(body_service/repo): user_id -&gt; user.id">
+      <option name="closed" value="true" />
+      <created>1783499357747</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1783499357747</updated>
+    </task>
+    <task id="LOCAL-00042" summary="fix(target): user_id -&gt; user.id">
+      <option name="closed" value="true" />
+      <created>1783499889074</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1783499889074</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fix(target): user_id -&gt; user.id">
+      <option name="closed" value="true" />
+      <created>1783500205297</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1783500205297</updated>
+    </task>
+    <task id="LOCAL-00044" summary="fix(meal): user_id -&gt; user.id">
+      <option name="closed" value="true" />
+      <created>1783501017668</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1783501017668</updated>
+    </task>
+    <task id="LOCAL-00045" summary="fix(meal): user_id -&gt; user.id">
+      <option name="closed" value="true" />
+      <created>1783501555316</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1783501555316</updated>
+    </task>
+    <task id="LOCAL-00046" summary="test: response_model">
+      <option name="closed" value="true" />
+      <created>1783502281049</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1783502281049</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix(app/schemas/): add the fields" />
+    <MESSAGE value="feat(models): description of models&#10;feat(alembic/versions): initial migration" />
+    <MESSAGE value="feat(schemas): validation&#10;fix(models):meal" />
+    <MESSAGE value="fix all" />
+    <MESSAGE value="feat: tg auth" />
+    <MESSAGE value="feat(main): router" />
+    <MESSAGE value="fix NutritionTarget" />
+    <MESSAGE value="feat: celery" />
+    <MESSAGE value="fix all warnings from the IDE" />
+    <MESSAGE value="fix dish route" />
+    <MESSAGE value="fix docker-compose" />
+    <MESSAGE value="feat: admin, admin_auth" />
+    <MESSAGE value="fix models&#10;feat model in admin" />
+    <MESSAGE value="fix admin auth" />
+    <MESSAGE value="test" />
+    <MESSAGE value="postman check" />
+    <MESSAGE value="fix(product_service): user.id" />
+    <MESSAGE value="fix(dish_repo): Dish.dishes_id" />
+    <MESSAGE value="fix(dish_repo): fix delete and update&#10;feat(dish_repo): return in delete and put" />
+    <MESSAGE value="fix(library_service/repo): user_id -&gt; user.id" />
+    <MESSAGE value="fix(library_service): dishes_id, product_id" />
+    <MESSAGE value="fix(body_service/repo): user_id -&gt; user.id" />
+    <MESSAGE value="fix(target): user_id -&gt; user.id" />
+    <MESSAGE value="fix(meal): user_id -&gt; user.id" />
+    <MESSAGE value="test: response_model" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: response_model" />
   </component>
 </project>

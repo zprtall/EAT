@@ -8,13 +8,13 @@ from app.services.product_service import ProductService
 from app.core.database import get_session
 from app.auth.dependencie import get_current_user
 
-router = APIRouter(prefix="/product")
+router = APIRouter(prefix="/product", )
 
 def get_product_service():
     return ProductService(ProductRepo())
 
 
-@router.post("/add/")
+@router.post("/add/", response_model=Product)
 def add_product(
         data: Product,
         user = Depends(get_current_user),
@@ -23,7 +23,7 @@ def add_product(
 ):
     return service.add_product(session, user, data)
 
-@router.delete("/delete/")
+@router.delete("/delete/", response_model=Product)
 def del_product(
         product_id: int,
         user = Depends(get_current_user),
@@ -32,7 +32,7 @@ def del_product(
 ):
     return service.delete_product(session, product_id, user)
 
-@router.put("/update/")
+@router.put("/update/", response_model=Product)
 def update_product(
         product_id: int,
         data: Product,
