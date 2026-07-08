@@ -15,7 +15,7 @@ services:
       - redis
     restart: always
     volumes:
-      - /alembic/versions:app/alembic/versions
+      - /alembic/versions:/app/alembic/versions
 
 
   celery_worker:

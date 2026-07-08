@@ -2,16 +2,16 @@ from app.models.body_param import BodyParam
 
 class BodyRepo:
 
-    def get_body(self, session, user_id):
+    def get_body(self, session, user):
         return session.query(BodyParam).filter(
-            BodyParam.user_id == user_id
+            BodyParam.user_id == user.id
         ).all()
 
-    def get_one_body(self, session, user_id: int, body_id: int):
+    def get_one_body(self, session, user, body_id):
         return (
             session.query(BodyParam)
             .filter(
-                BodyParam.user_id == user_id,
+                BodyParam.user_id == user.id,
                 BodyParam.id == body_id
             )
             .first()

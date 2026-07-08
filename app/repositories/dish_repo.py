@@ -8,12 +8,14 @@ class DishRepo:
         return dish
 
     def get_dish(self, session, dish_id: int):
-        return session.query(Dish).filter(Dish.id == dish_id).first()
+        return session.query(Dish).filter(Dish.dishes_id == dish_id).first()
 
     def delete_dish(self, session, dish):
         session.delete(dish)
         session.commit()
+        return dish
 
     def update_dish(self, session, dish):
         session.commit()
         session.refresh(dish)
+        return dish

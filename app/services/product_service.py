@@ -10,9 +10,9 @@ class ProductService:
     def __init__(self, repo: ProductRepo):
         self.repo = repo
 
-    def add_product(self, session, user_id: int, data: ProductSchema):
+    def add_product(self, session, user, data: ProductSchema):
         product = ProductModel(
-            user_id=user_id,
+            user_id=user.id,
             name=data.name,
             calories=data.calories,
             proteins=data.proteins,
@@ -21,17 +21,17 @@ class ProductService:
         )
         return self.repo.create_products(session, product)
 
-    def get_product(self, session, user_id: int, product_id: int):
-        return self.repo.get_product(session, user_id, product_id)
+    def get_product(self, session, user, product_id: int):
+        return self.repo.get_product(session, user.id, product_id)
 
-    def delete_product(self, session, product_id: int, user_id: int):
-        product = self.get_product(session, user_id, product_id)
+    def delete_product(self, session, product_id: int, user):
+        product = self.get_product(session, user, product_id)
         if not product:
             raise HTTPException(status_code=404, detail="Продукт не найден")
         self.repo.delete_product(session, product)
 
-    def update_product(self, session, user_id: int, product_id: int, data: ProductSchema):
-        product = self.get_product(session, user_id, product_id)
+    def update_product(self, session, user, product_id: int, data: ProductSchema):
+        product = self.get_product(session, user, product_id)
         if not product:
             raise HTTPException(status_code=404, detail="Продукт не найден")
         for field, value in data.model_dump().items():

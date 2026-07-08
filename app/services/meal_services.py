@@ -12,8 +12,8 @@ class MealService:
     def __init__(self, repo: MealRepository):
         self.repo = repo
 
-    def get_day(self, session, user_id: int, date: datetime.date):
-        meals = self.repo.get_by_meal_date(session, user_id, date)
+    def get_day(self, session, user, date: datetime.date):
+        meals = self.repo.get_by_meal_date(session, user.id, date)
 
         result_meals = []
         day_cal = day_p = day_f = day_c = 0
@@ -58,7 +58,7 @@ class MealService:
             day_c += m_c
 
             result_meals.append({
-                "meal_id": meal.id,
+                "meal_id": meal.meal_id,
                 "time": meal.time,
                 "type": meal.type,
                 "items": items_out,
@@ -68,7 +68,7 @@ class MealService:
                 "total_carbs": m_c,
             })
 
-        target = session.query(NutritionDailyTarget).filter_by(user_id=user_id).first()
+        target = session.query(NutritionDailyTarget).filter_by(user_id=user.id).first()
 
         return {
             "summary": {
@@ -86,9 +86,9 @@ class MealService:
             "meals": result_meals
         }
 
-    def add_meal(self, session, user_id: int, data: MealCreate):
+    def add_meal(self, session, user, data: MealCreate):
         meal = Meal(
-            user_id=user_id,
+            user_id=user.id,
             date=data.date,
             time=data.time,
             type=data.type
@@ -111,16 +111,16 @@ class MealService:
 
         return self.repo.create(session, meal)
 
-    def delete_meal(self, session, meal_id: int, user_id: int):
-        meal = self.repo.get_meal(session, meal_id, user_id)
+    def delete_meal(self, session, meal_id: int, user):
+        meal = self.repo.get_meal(session, meal_id, user.id)
 
         if not meal:
             raise HTTPException(status_code=404, detail="приём пищи не найден")
 
         self.repo.delete_meal(session, meal)
 
-    def update_meal(self, session, meal_id: int, user_id: int, data: MealCreate):
-        meal = self.repo.get_meal(session, meal_id, user_id)
+    def update_meal(self, session, meal_id: int, user, data: MealCreate):
+        meal = self.repo.get_meal(session, meal_id, user.id)
         if not meal:
             raise HTTPException(status_code=404, detail="приём пищи не найден")
         meal.date = data.date
