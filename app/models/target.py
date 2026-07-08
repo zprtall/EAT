@@ -8,6 +8,7 @@ class NutritionDailyTarget(Base):
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, index= True)
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable=False, unique=True)
+
     calories: Mapped[float] = mapped_column(Float, nullable=False, default=0)
     proteins: Mapped[float] = mapped_column(Float, nullable=False, default=0)
     fats: Mapped[float] = mapped_column(Float, nullable=False, default=0)

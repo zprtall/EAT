@@ -10,7 +10,13 @@ class NutritionService:
     def _get_or_create(self, session, user):
         target = self.repo.get_by_user(session, user.id)
         if not target:
-            target = NutritionDailyTarget(user_id=user.id)
+            target = NutritionDailyTarget(
+                user_id=user.id,
+                calories=1,
+                proteins=1,
+                fats=1,
+                carbs=1
+            )
             target = self.repo.create(session, target)
         return target
 
