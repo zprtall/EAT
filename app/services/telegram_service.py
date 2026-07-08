@@ -9,3 +9,13 @@ def send_telegram_reminder(telegram_id: int):
             "text": "Пора внести калории!"
         }
     )
+
+    def can_send_reminder(user, settings):
+
+        if not settings.reminders_enabled:
+            return False
+
+        if not user.reminder_settings.reminders_enabled:
+            return False
+
+        return True

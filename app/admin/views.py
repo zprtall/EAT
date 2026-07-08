@@ -7,6 +7,7 @@ from app.models.meal import Meal, MealItem
 from app.models.product import Product
 from app.models.target import NutritionDailyTarget
 from app.models.system_settings import SystemSettings
+from app.models.user_reminder_settings import UserReminderSettings
 
 
 class Users(ModelView, model=User):
@@ -134,3 +135,23 @@ class SystemSettingsAdmin(
     form_columns = [
         SystemSettings.reminders_enabled
     ]
+
+from app.models.user_reminder_settings import UserReminderSettings
+
+
+class UserReminderSettingsAdmin(
+    ModelView,
+    model=UserReminderSettings
+):
+
+    column_list = [
+        UserReminderSettings.user_id,
+        UserReminderSettings.reminders_enabled
+    ]
+
+
+    form_columns = [
+        UserReminderSettings.user_id,
+        UserReminderSettings.reminders_enabled
+    ]
+
