@@ -14,6 +14,8 @@ class User(Base):
 
     habit_times: Mapped[list] = mapped_column(JSON, default=list)
     last_reminder_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    reminder_settings = relationship("UserReminderSettings", back_populates="user", uselist=False,
+                                     cascade="all, delete-orphan")
 
     body_params = relationship("BodyParam", back_populates="user")
     dishes = relationship("Dish", back_populates="user")
