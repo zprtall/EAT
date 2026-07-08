@@ -7,7 +7,7 @@ from app.models.meal import Meal, MealItem
 from app.models.product import Product
 from app.models.target import NutritionDailyTarget
 from app.models.system_settings import SystemSettings
-from app.models.user_reminder_settings import UserReminderSettings
+
 
 
 class Users(ModelView, model=User):
