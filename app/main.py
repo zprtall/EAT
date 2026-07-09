@@ -12,7 +12,8 @@ from app.api.library import router as library_router
 from app.api.product import router as product_router
 from app.api.target import router as target_router
 
-from uvicorn.middleware.proxy_headers import ProxyHeadersMiddleware
+from starlette.middleware.trustedhost import TrustedHostMiddleware
+
 
 
 
@@ -23,11 +24,15 @@ app.include_router(dish_router)
 app.include_router(library_router)
 app.include_router(product_router)
 app.include_router(target_router)
+
 app.add_middleware(
     SessionMiddleware,
-    ProxyHeadersMiddleware,
-    allowed_hosts=["eat.prosandbox.ru"],
     secret_key="SUPER_SECRET"
+)
+
+app.add_middleware(
+    TrustedHostMiddleware,
+    allowed_hosts=["eat.prosandbox.ru"],
 )
 
 @app.get("/")
