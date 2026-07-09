@@ -12,7 +12,7 @@ from app.models.system_settings import SystemSettings
 
 class Users(ModelView, model=User):
     column_list = [User.id, User.telegram_id, User.last_reminder_at]
-    form_columns = [User.telegram_id, User.last_reminder_at]
+    form_columns = [User.telegram_id, User.username, User.first_name,User.last_reminder_at]
 
 
 class BodyParams(ModelView, model=BodyParam):
