@@ -2,7 +2,7 @@ import hashlib
 import hmac
 from urllib.parse import parse_qsl
 
-from app.core.config import TELEGRAM_BOT_TOKEN
+from app.core.config import settings
 
 
 def validate_telegram_data(init_data: str) -> dict:
@@ -12,7 +12,7 @@ def validate_telegram_data(init_data: str) -> dict:
 
     secret_key = hmac.new(
         b"WebAppData",
-        TELEGRAM_BOT_TOKEN.encode(),
+        settings.TELEGRAM_BOT_TOKEN.encode(),
         hashlib.sha256,
     ).digest()
 

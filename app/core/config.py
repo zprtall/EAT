@@ -1,7 +1,6 @@
 import os
 from pydantic_settings import BaseSettings
 
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
 
 
@@ -19,6 +18,8 @@ class Settings(BaseSettings):
     REDIS_PORT: int
 
     SECRET_KEY: str
+
+    TELEGRAM_BOT_TOKEN: str
 
     class Config:
         env_file = ".env"
