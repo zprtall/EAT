@@ -1,7 +1,7 @@
 import os
 from pydantic_settings import BaseSettings
 
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_BOT_TOKEN = os.getenv("8866695900:AAGncgC7I-OT96mXK1BYfx_p85zUaN9jZz0")
 
 
 
