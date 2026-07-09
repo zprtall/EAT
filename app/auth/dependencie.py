@@ -33,13 +33,10 @@ def get_current_user(
 
     try:
         data = validate_telegram_data(x_telegram_auth)
-
         user_data = json.loads(data["user"])
         telegram_id = user_data["id"]
-
         repo = UserRepo()
         user = repo.get_by_telegram_id(session, telegram_id)
-
         if not user:
             user = User(
                 telegram_id=telegram_id,
